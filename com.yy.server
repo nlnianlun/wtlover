@@ -1,0 +1,28 @@
+package com.yy.webservice.impl;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.jws.WebService;
+
+import org.eclipse.jetty.server.Authentication.User;
+
+import com.yy.domain.Cat;
+import com.yy.webservice.HelloWorld;
+
+@WebService(endpointInterface = "com.yy.webservice.HelloWorld", serviceName = "helloWorldWs")
+public class HelloWords implements HelloWorld {
+
+	@Override
+	public String sayHi(String name) {
+		// TODO Auto-generated method stub
+		return name + "你好，现在的时间是：" + new Date();
+	}
+
+	@Override
+	public List<Cat> getCatByUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
